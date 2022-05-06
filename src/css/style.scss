@@ -1,0 +1,161 @@
+body {
+    margin: 0;
+    background-color: #a2d9ff;
+    color: #273036;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.c1 {
+    position: fixed;
+    top: 10px;
+    left: 5px;
+
+    animation: dash1 40s cubic-bezier(.65, .36, .44, .75) infinite;
+    stroke-dasharray: 290;
+}
+
+.c2 {
+    position: fixed;
+    top: 19px;
+    left: 12px;
+
+    animation: dash1 35s cubic-bezier(.65, .36, .44, .75) infinite alternate;
+    stroke-dasharray: 250;
+}
+
+.c3 {
+    position: fixed;
+    top: 28px;
+    left: 19px;
+
+    animation: dash1 25s cubic-bezier(.65, .36, .44, .75) infinite alternate;
+    stroke-dasharray: 300;
+}
+
+.c4 {
+    position: fixed;
+    top: 37px;
+    left: 26px;
+    animation: dash1 20s cubic-bezier(.65, .36, .44, .75) infinite alternate;
+    stroke-dasharray: 190;
+}
+
+#message {
+    font-size: 26px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.reveal {
+    visibility: visible;
+}
+
+header {
+    height: 25vw;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    h1 {
+        margin-top: 4rem;
+        position: relative;
+        z-index: 9;
+        text-align: center;
+    }
+}
+
+#nova_formacao {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 40%;
+
+    &:hover {
+        width: 50%;
+    }
+
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        height: 200px;
+        margin: 2px;
+
+        &:hover {
+            height: 300px;
+        }
+
+    }
+}
+
+.waves {
+    margin: 0;
+    bottom: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 110%;
+
+    .wave-01 {
+        animation: wave1 3s ease-in-out infinite alternate;
+
+    }
+
+    .wave-02 {
+        animation: wave2 3s ease-in-out infinite alternate;
+    }
+
+    .wave-03 {
+        animation: wave2 3s ease-in-out infinite alternate;
+    }
+
+    .wave-03 {
+        animation: dash1 3s cubic-bezier(.65, .36, .44, .75) infinite alternate;
+        stroke-dasharray: 150;
+        stroke: #0099ff;
+        stroke-width: 3px;
+    }
+
+    @keyframes wave1 {
+        from {
+            transform: translateX(-50px);
+        }
+    }
+
+    @keyframes wave2 {
+        from {
+            transform: translateX(-100px);
+        }
+    }
+
+    @keyframes wave3 {
+        from {
+            transform: translateX(-20px);
+        }
+    }
+
+    @keyframes dash1 {
+        from {
+            stroke-dashoffset: 2000;
+        }
+
+        to {
+            stroke-dashoffset: 0;
+        }
+    }
+}
+
+
+@import 'player';
